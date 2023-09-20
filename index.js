@@ -33,6 +33,13 @@ router.post("/api/count", async (ctx) => {
   };
 });
 
+router.get("/api/test"),async (ctx) => {
+  ctx.body = {
+    code:0,
+    data:"测试成功"
+  }
+}
+
 // 获取计数
 router.get("/api/count", async (ctx) => {
   const result = await Counter.count();
